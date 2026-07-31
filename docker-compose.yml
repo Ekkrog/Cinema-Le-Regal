@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16
+    container_name: leregal-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: leregal_user
+      POSTGRES_PASSWORD: leregal_pass
+      POSTGRES_DB: le_regal
+    ports:
+      - "5433:5432"   # port different de adakor (5432) pour eviter le conflit
+    volumes:
+      - leregal_pgdata:/var/lib/postgresql/data
+      - ./mount_up_data.sql:/docker-entrypoint-initdb.d/mount_up_data.sql
+
+volumes:
+  leregal_pgdata:

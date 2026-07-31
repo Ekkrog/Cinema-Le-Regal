@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cinema Le Regal</title>
+    </head>
+
+    <!-- STYLE  -->
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-image: url("./Hall.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        main {
+            background-color: rgba(129, 51, 131, 0.248);
+            padding: 20px;
+            border-radius: 8px;
+            color: aliceblue;
+        }
+
+        header,
+        footer {
+            background-color: #251d3cac;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 150px 1fr 150px;
+            align-items: center;
+            text-align: center;
+        }
+
+        header img {
+            border-radius: 70px;
+            justify-self: start;
+        }
+
+        .header-texte {
+            grid-column: 2;
+            padding-left: 30px;
+            line-height: 50px;
+            font-size: 1.2rem;
+        }
+
+        .header-texte h1 {
+            font-size: 3rem;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #7e7a7a;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #1f1f2e;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #565454;
+        }
+
+        tbody tr:hover {
+            background-color: #55545b;
+        }
+
+        #contact {
+            display: block;
+        }
+
+        #contact h2 {
+            width: 100%;
+        }
+
+        #contact a {
+            color: #b1a8a8;
+        }
+
+        .services-contenu {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .services-listes {
+            flex: 1;
+        }
+
+        .services-image {
+            flex-shrink: 0;
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .services-contenu {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+
+    <body>
+        <header>
+            <img src="./logo.png" height="150" width="150" />
+            <div class="header-texte">
+                <h1>Le Cinema Le Regal</h1>
+                <nav>
+                    <a href="#presentation">Le Regal</a>
+                    <a href="#programme">Programme</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="presentation">
+                <h2>Un Regal pour les yeux depuis 80 ans</h2>
+                <p>
+                    C'est après la seconde guerre que François-Claude Regal,
+                    alors électricien, eue l'idée pour divertir ses
+                    contemporains d'ouvrir un cinéma et d'y diffuser quelques
+                    films amateurs et semi-professionnels de producteurs locaux.
+                </p>
+                <p>
+                    Au fil des années,<strong>le cinéma Regal</strong> a évolué
+                    mais il continue d'offrir a chacun de ses visiteurs une
+                    expérience unique
+                </p>
+            </section>
+
+            <table id="programme">
+                <caption>
+                    Programme de la semaine
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Film</th>
+                        <th scope="col">Jour</th>
+                        <th scope="col">Horaire</th>
+                        <th scope="col">Salle</th>
+                        <th scope="col">Version</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Les Quatre Filles du docteur March</td>
+                        <td>Vendredi</td>
+                        <td>18h00</td>
+                        <td>Grande salle</td>
+                        <td>VF</td>
+                    </tr>
+                    <tr>
+                        <td>Portrait de la jeunue fille en feu</td>
+                        <td>Samedi</td>
+                        <td>16h30</td>
+                        <td>Petite salle</td>
+                        <td>VF</td>
+                    </tr>
+                    <tr>
+                        <td>Hidden Figures</td>
+                        <td>Samedi</td>
+                        <td>20h00</td>
+                        <td>Grande salle</td>
+                        <td>VOST</td>
+                    </tr>
+                    <tr>
+                        <td>Le Voyage de Chihiro</td>
+                        <td>Dimanche</td>
+                        <td>14h00</td>
+                        <td>Grande salle</td>
+                        <td>VF</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">4 séances cette semaine</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <section id="services">
+                <h2>Services</h2>
+                <ul>
+                    <li>Un kebab</li>
+                    <li>Un manège</li>
+                    <li>Un Hippopotamus</li>
+                    <li>Un photomaton</li>
+                    <li>Une boutique à confiseries</li>
+                </ul>
+
+                <h3>Pour réserver</h3>
+                <ol>
+                    <li>Choisissez un film</li>
+                    <li>Définissez le nombre de places et leur emplacement</li>
+                    <li>Validez votre panier</li>
+                </ol>
+            </section>
+
+            <p>Vous pouvez également :</p>
+
+            <section id="contact">
+                <h2>Nous trouver</h2>
+                <address>📍 120 Rue de la Vieille, Bitche 57230</address>
+
+                <p>
+                    <a href="mailto:contact@cinemaregal.fr">Ecrivez-nous</a>
+                </p>
+                <p>
+                    <a
+                        href="https://Fassebook-le-Regal.com"
+                        target="_blank"
+                        rel="noopener"
+                        >Notre page Fassebook</a
+                    >
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Le Cinéma Regal</p>
+        </footer>
+    </body>
+</html>
+
+<!-- Quand utilise-t-on un <table>, et quand ne faut-il surtout pas ? -->
+
+<!-- Il faut utiliser un <table> uniquement pour structurer des données. 
+    En contrepartie, il ne faut pas utiliser le <table> pour la mise en forme de la page car non pris en charge par les lecteurs d'écran, cassent le code et non réactifs.-->
